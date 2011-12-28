@@ -1,0 +1,9 @@
+What is omgnosql?
+
+omgnosql (OMG!!!1 NoSQL!!1!) is a favorite phrase of hipstergrammers (http://hipstergrammers.tumblr.com/). It's also an anagram of MongoDB and SQL.
+
+NoSQL zealots who don't know what they're talking about say that SQL doesn't scale. They are, of course, horribly misguided. The way that people use SQL sometimes doesn't scale, and concepts that work in-the-small may not work in-the-large. And these people then go and implement solutions using stuff like MongoDB and end up losing their data because they don't know how it works and preemptively scaled.
+
+I think that schemaless, eventually-consistent data stores have a place and are useful. I just think that most (all) of the current efforts are throwing away years of investment in SQL datastores. Rather than thinking of NoSQL as a brand-new paradigm shift that requires a ground-up reimplementation, we need to think of it as layer of abstraction on top of MySQL and memcache (or your preferred setup). Re-implementing all of the work that has gone into these projects is a bad idea and is contrary to The Unix Way. If you don't want to use them directly, fine, but at least have the peace-of-mind of using them as the underlying storage engine, since chances are it will do what you want (see http://teddziuba.com/2010/10/taco-bell-programming.html).
+
+I think that we can get 80% of the functionality and performance of MongoDB in under 2000 lines of Python by building on top of MySQL and memcache.
